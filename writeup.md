@@ -26,7 +26,7 @@ Examining the source code (chall.c), we see that the program sets variable `code
 
 ### Dynamic Analysis
 
-We iteratively run `echo $OVERFLOW | ./chall'' , where OVERFLOW is a string of A's of length > 256. We find that 4 bytes overflow into the `code` when the length of OVERFLOW is 268:
+We iteratively run `echo $OVERFLOW | ./chall` , where OVERFLOW is a string of A's of length > 256. We find that 4 bytes overflow into the `code` when the length of OVERFLOW is 268:
 
 ```shell
 hannah@DESKTOP-HE54UPJ:/mnt/c/Users/Hannah/Desktop/whisnant.hannah/picoCTF/clutter_overflow$ echo 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' | ./chall
